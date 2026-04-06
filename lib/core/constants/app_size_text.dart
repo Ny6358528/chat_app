@@ -1,3 +1,3 @@
 class AppSizeText {
-  static const double s49 = 49;
+  static const double s35 = 35;
 }
