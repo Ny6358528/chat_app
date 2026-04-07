@@ -30,7 +30,7 @@ class BottomTextInSignin extends StatelessWidget {
 
           TextButton(
             onPressed: () {
-              Navigator.pushNamed(context,screen );
+              Navigator.pushReplacementNamed(context,screen );
             },
             child: TextWidgets(text: nameScreen,textStyle: const TextStyle(color: Colors.white,  fontWeight: FontWeight.bold,fontSize: 20),),
 
