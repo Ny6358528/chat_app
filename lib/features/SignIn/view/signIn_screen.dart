@@ -1,7 +1,9 @@
 import 'package:chat_app/core/constants/app_images.dart';
+import 'package:chat_app/core/constants/app_routes.dart';
 import 'package:chat_app/core/constants/app_size_text.dart';
 import 'package:chat_app/core/constants/app_string.dart';
 import 'package:chat_app/core/widgets/text_widgets.dart';
+import 'package:chat_app/features/sign_up/view/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import '../../../core/colors/app_colors.dart';
@@ -82,7 +84,7 @@ class SignInScreen extends StatelessWidget {
                 const Gap(20),
 
 
-                BottomTextInSignin(),
+                BottomTextInSignin(bottomText: AppString.textBottomLoginName, nameScreen: AppString.signupName, screen: AppRoutes.signUp,),
               ],
             ),
           ),

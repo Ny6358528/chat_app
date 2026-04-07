@@ -6,8 +6,11 @@ import '../../sign_up/view/sign_up_screen.dart';
 
 class BottomTextInSignin extends StatelessWidget {
   const BottomTextInSignin({
-    super.key,
+    super.key, required this.bottomText, required this.nameScreen, required this.screen,
   });
+  final String bottomText;
+  final String nameScreen;
+  final String screen;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +20,7 @@ class BottomTextInSignin extends StatelessWidget {
         children: [
 
           TextWidgets(
-            text: AppString.textBottomLoginName,
+            text: bottomText,
             textStyle: TextStyle(
               color: Colors.white,
               fontSize: 16,
@@ -27,12 +30,9 @@ class BottomTextInSignin extends StatelessWidget {
 
           TextButton(
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                return SignUpScreen();
-              }));
+              Navigator.pushNamed(context,screen );
             },
-            child: const
-            TextWidgets(text: AppString.signupName,textStyle: TextStyle(color: Colors.white,  fontWeight: FontWeight.bold,fontSize: 20),),
+            child: TextWidgets(text: nameScreen,textStyle: const TextStyle(color: Colors.white,  fontWeight: FontWeight.bold,fontSize: 20),),
 
           ),
 

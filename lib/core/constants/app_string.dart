@@ -5,4 +5,5 @@ class AppString {
   static const String emailName = "Email";
   static const String passwordName = "Password";
   static const String textBottomLoginName = "Don't have an account ";
+  static const String textBottomResName = "Already have an account ";
 }
