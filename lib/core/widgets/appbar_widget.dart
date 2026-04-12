@@ -1,30 +1,38 @@
+import 'package:chat_app/core/colors/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
   const AppbarWidget({
     super.key,
     required this.title,
-    required this.icon1,
-    required this.icon2,
+     this.icon1,
+     this.icon2, required this.image,
   });
   final String title;
-  final IconData icon1;
-  final IconData icon2;
+  final IconData? icon1;
+  final IconData? icon2;
+  final String image;
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: AppColors.primaryColor,
       toolbarHeight: preferredSize.height,
       leading: SizedBox.shrink(),
       leadingWidth: 0,
+      centerTitle: true,
       title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(icon1, size: 28),
+          Image.asset(
+        image,
+            height: 50,
+
+          ),
           Text(
             title,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700,color: Colors.white),
           ),
-          IconButton(onPressed: () {}, icon: Icon(icon2)),
+
         ],
       ),
     );
