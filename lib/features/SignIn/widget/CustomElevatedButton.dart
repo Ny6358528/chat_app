@@ -9,15 +9,16 @@ import '../../../core/colors/app_colors.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton({
-    super.key, required this.nameButton,
+    super.key, required this.nameButton,required this.onPressed,
   });
 final String nameButton;
+  final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
 
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.white,
